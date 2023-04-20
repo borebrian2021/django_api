@@ -12,7 +12,7 @@ class TestModel(models.Model):
         
 
     def __str__(self):
-        return f"{self.test_content.test_content.milage}"
+        return f"{self.name}"
     
     class Meta:
         ordering = ("-amount",)
@@ -42,7 +42,7 @@ class ModelY(models.Model):
     created_at =models.DateTimeField(auto_now_add=True)
     updated_at =models.DateTimeField(auto_now=True)
     def __str__ (self):
-        return f"{self.test_content.name} - {self.mileage}"
+        return f"{self.test_content.name} - {self.milage}"
     
         class Meta:
             ordering = ("-created_at",)
