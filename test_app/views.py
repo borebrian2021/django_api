@@ -9,5 +9,5 @@ class simple(APIView):
         return JsonResponse({"data":[1,2,3,4,5]})
     
     def get(self, request):
-        content =TestModel.objects.all().values()[1]
-        return JsonResponse({"data":dict(content)})
+        content =TestModel.objects.all().values()
+        return JsonResponse({"data":list(content)})
