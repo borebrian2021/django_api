@@ -1,7 +1,7 @@
 from django.http import JsonResponse, response
 from django.views.decorators.csrf import csrf_exempt
 from .models import TestModel
-
+from django.forms.models import model_to_dict
 from rest_framework.views import APIView
 
 class simple(APIView):
@@ -14,7 +14,7 @@ class simple(APIView):
             amount = request.data['amount'],
         )
        
-        return JsonResponse({"data":request.data})
+        return JsonResponse({"data":model_to_dic(new_test_content)})
         
        
     
