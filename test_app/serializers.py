@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import TestModel
 
 class SimpleSerializer(serializers.Serializer):
+    id=serializers.IntegerField(read_only=True)
     name=serializers.CharField()
     description =serializers.CharField()
     phone_number=serializers.IntegerField()
