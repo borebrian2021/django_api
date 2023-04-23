@@ -5,5 +5,5 @@ class SimpleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TestModel
-        # fields=("name","description",)
+        # fields=("name","description","id",)
         fields="__all__"
